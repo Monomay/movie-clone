@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
+html,body{
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    background-color: #00000069;
+}
+.container{
+    width: 100%;
+    /* max-width: 1242px; */
+    margin: 0 auto;
+    background-color: #000000;
+}
+.header-container{
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-between;
+}
+
+/* header css */
+
+.left-container, .right-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo{
+    max-width: 110px;
+    height: 80px;
+    margin-top: 11px;
+    /* margin-right: 23px; */
+    margin-left: 50px;
+    margin-bottom: 8px;
+    border: 2px solid red;
+    border-radius: 50px;
+}
+.main-nav{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    /* display: none; */
+}
+.nav-item{
+    color: #e5e5e5;
+    margin-right: 20px;
+    opacity: 0.83;
+}
+.nav-item.active{
+    color: white;
+    opacity: 1;
+    font-weight: 500;
+}
+.right-container{
+    margin-right: 55px;
+}
+.right-container svg{
+    color: black;
+    margin-right: 5px;
+    padding: 0px;
+    cursor: pointer;
+}
+.right-container input{
+    margin-right: 9px;
+    height: 30px;
+    border-radius: 12px;
+    border: 2px solid red;
+    padding-left: 10px;
+}
+.btn:hover{
+    background-color: red;
+}
+.btn:active{
+    transform: scale(0.9);
+}
+
+/* image section */
+.cont-row{
+    width: 100%;
+    /* border: 2px solid red; */
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    margin-top: 5%;
+}
+.cont-section-heading{
+    margin-top: 5%;
+    text-align: center;
+}
+.cont-row::-webkit-scrollbar{
+    overflow: hidden;
+}
+.img-item{
+    height: 244px;
+    width: 230px;
+    margin: 16px;
+    border: 2px solid red;
+    cursor: pointer;
+    transition: transform 0.3s linear;
+}
+.img-item:hover{
+    transform: scale(1.1);
+}
+.movies-grid{
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 1rem;
+
+}
+
+/* <!-- Mobile menu toggle --> */
+.hamburger-menu{
+    margin-left: 20px;
+    --size: 30px;
+    height: var(--size);
+    width: var(--size);
+    cursor: pointer;
+    z-index: 101;
+    position: relative;
+    display: none;
+    align-items: center;
+}
+.hamburger{
+    position: relative;
+}
+.hamburger,
+.hamburger::before,
+.hamburger::after{
+    width: var(--size);
+    height: 3px;
+    border-radius: 5rem;
+    background-color: white;
+    transition: 0.6s;
+}
+
+.hamburger::before,
+.hamburger::after{
+    content: "";
+    position: absolute;
+    left: 0;
+}
+
+.hamburger::before{
+    top: -10px;
+}
+
+.hamburger::after{
+    bottom: -10px;
+}
+
+.hamburger-menu.active .hamburger{
+    background-color: transparent;
+}
+
+.hamburger-menu.active .hamburger::before{
+    transform-origin: top left;
+    transform: rotate(45deg);
+    left: 6px;
+}
+
+.hamburger-menu.active .hamburger::after{
+    transform-origin: bottom left;
+    transform: rotate(-45deg);
+    left: 6px;
+}
+
+/* @RESPONSIVE CSS */
+
+@media only screen and (max-width: 768px){
+    .hamburger-menu{
+        display: grid;
+    }
+    
+    .main-nav{
+        /* display: none;  */
+        align-items: center;
+        position: absolute;
+        top: 14%;
+        left: -100;
+        background-color: #000000;
+        flex-direction: column;
+        width: 80%;
+        height: 100vh;
+        padding: 20px;
+        transition: .3s ease-in-out;
+    }
+    .main-nav li{
+        margin: 10px 30px;
+    }
+    .main-nav.active {
+        display: none;
+        left: 0;
+    }
+    .img-item{
+        height: 165px;
+        width: 150px;
+        margin: 10px;
+    }
+}
+
+
+
+
+
+
+
+/* .container{
+    height: 100%;
+    width: 100%;
+} */
+
+/* navbar */
+/* .navbar{
+    width: 100%;
+    height: 100%;
+} */
+/* .navItem{ */
+    /* margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem; */
+    /* height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    background: rgb(170, 110, 110);
+}
+
+a{
+    color: black;
+} */
+/* a:hover{
+    
+} */
+
+/* img{
+    width: 5rem;
+    margin-right: 43rem;
+    margin-left: 1rem;
+    margin-top: 0.4rem;
+} */
+
+/* .home{
+    width: 35px;
+    margin-right: 0px;
+}
+.fav{
+    width: 35px;
+    margin-right: 0px;
+}
+.form-control{
+    width: 162px;
+    height: 33px;
+    margin-right: 5px;
+    background-color: #fdfdfd8a;
+    padding: 0px 18px;
+    border: 2px solid var(--primary-color);
+    border-radius: 20px;
+    font-size: 14px;
+    color: black;
+    font-family: inherit;
+}
+.btn{
+    background-color: #fdfdfd8a;
+    height: 34px;
+    border: 2px solid var(--primary-color);
+    border-radius: 16px;
+}
+
+.foI{
+    float: right;
+    line-height: 62px;
+} */
+/* navbar */
+/* 
+.main{
+    overflow-x: hidden;
+} */
+/* .mar{
+     width: 100%; */
+    /* height: 100%; */
+    /* margin-top: 0px;
+    margin-left: 0px;
+} */
+
+/* .navbar{
+    height: 80px;
+    background: rgb(170, 110, 110);
+}
+
+
+.fI{
+    float: right;
+    width: 90px;
+    position: absolute;
+    top: 9px;
+    left: 6%;
+    height: 58px;
+    position: absolute;
+}
+.d-flex{
+    margin-right: 60px;
+}
+.navItem{
+    float: right;
+    margin-right: 40px;
+}
+.navItem li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 15px;
+}
+.navItem li a{
+    position: relative;
+    color: black;
+    font-size: 18px;
+    padding: 5px 0;
+    text-transform: uppercase;
+
+}
+.navItem li a:before{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background: rgb(173, 190, 196);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .4s linear;
+}
+.navItem li a:hover:before{
+    transform: scaleX(1);
+    transform-origin: left;
+} */
+
+/* @media only screen and (max-width: 768px){
+    .mar{
+        width: 100%;
+        height: 100%;
+    }
+    .navItem{
+
+    }
+} */
+    
+

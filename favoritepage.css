@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#movieDetails{
+    text-align: center;
+    margin-top: 2%;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(91, 123, 229);
+}
+.noting{
+    text-align: center;
+    margin-top: 2%;
+    font-family: cursive;
+    /* font: message-box; */
+}
+.movie-div-place{
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+.movie-detail-div{
+    /* background-color: red; */
+    margin-top: 2%;
+    margin-left: 2%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    padding: 2% 2.5%;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px 10px rgba(173, 216, 230, 0.5);
+    transition: all 0.6s;
+    border: 1px solid rgba(149, 151, 151, 0.5);
+}
+.movie-detail-div:hover {
+    transform: scale(1.04);
+    box-shadow: 10px 10px 10px 10px rgba(174, 145, 243, 0.5);
+    cursor: pointer;
+  }
+#imageDiv>img{
+    height: 200px;
+    width: 200px;
+    border-radius:10px;
+}
+#movieName{
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    margin-top: 10px;
+}
+#rating{
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    margin-top: 10px;
+}
+#overview{
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: rgb(81, 75, 75);
+    margin-top: 10px;
+}
+#genree{
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: rgb(81, 75, 75);
+    margin-top: 10px;
+}
+.listButton{
+    margin-top: 20px;
+   justify-content: space-around;
+}
+.buttons{
+    padding: 8px 30px;
+    border: none;
+    /* outline: none; */
+    background-color: #0476B5;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+
+}
+.buttons:hover{
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+
+.image-list{
+    height: 200px;
+    width: 200px;
+    border-radius:10px;
+}
+.movies-list-div{
+    display: flex;
+    gap: 1%;
+}
+.movie-genree{
+    display: flex;
+}
+
+/* Responsive */
+@media only screen and (max-width: 768px){
+    .movie-detail-div{
+        /* background-color: red; */
+        margin-top: 2%;
+        margin-left: 5%;
+        margin-right: 2%;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        padding: 2% 2.5%;
+        align-items: center;
+        border-radius: 10px;
+        box-shadow: 10px 10px 10px 10px rgba(173, 216, 230, 0.5);
+        transition: all 0.6s;
+        border: 1px solid rgba(149, 151, 151, 0.5);
+    }
+    #movieDetails{
+        font-size: 20px;
+    }
+    #movieName{
+        font-size: 12px;
+    }
+    #rating{
+        font-size: 12px;
+    }
+    #genree{
+        font-size: 10px;
+    }
+    #overview{
+        font-size: 11px;
+    }
+    .buttons{
+        margin: 5px;
+        padding: 0px 12px;
+        font-weight: 300;
+        display: flex;
+        justify-content: space-between;
+    }
+    #imageDiv>img {
+        height: 150px;
+        width: 175px;
+    }
+
+}
+
+
